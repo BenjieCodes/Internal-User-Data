@@ -2,23 +2,31 @@ body {
   padding: 30px; }
 
 .container {
-  margin: 0 auto;
-  width: 1000px; }
+  margin: 0 auto; }
 
 header {
-  font-size: 30px;
+  padding: 40px;
+  font-size: 33px;
   text-align: center;
   font-weight: bold; }
 
 .usercontainer {
+  margin: 20px;
   float: left;
-  max-width: 250px;
   text-align: center; }
+
+img {
+  width: 250px; }
+
+.img {
+  width: 250px; }
 
 .name {
   text-transform: uppercase;
-  font-weight: bold;
-  text-decoration: underline; }
+  font-weight: bold; }
+
+.name span {
+  border-bottom: 1px solid #24A059; }
 
 .email {
   text-transform: uppercase;
@@ -34,8 +42,8 @@ header {
 
 .ss {
   color: #279727;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
   transition: filter 0 ease; }
   .ss:hover {
     -webkit-filter: blur(0);

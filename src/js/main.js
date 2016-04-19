@@ -29,7 +29,7 @@ function inputTemplate (obj) {
           <img src= ${obj.picture.large}>
         </div>
         <div class="name">
-          ${obj.name.first} ${obj.name.last}
+          <span>${obj.name.first} ${obj.name.last}</span>
         </div>
         <div class="email">
           ${obj.email}
