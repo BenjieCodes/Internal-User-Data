@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-var url = 'https://randomuser.me/api/';
+var url = 'http://api.randomuser.me/?nat=us&results=12';
 var getData = $.getJSON(url);
 var insertData = $('.users');
 
@@ -21,7 +21,10 @@ insertData.append(usersInfo);
 
 });
 // 4. Made a template for the user data
+
 function inputTemplate (obj) {
+
+  if (obj.nat ==="US") {
   return `<div class="image">
               <img src= ${obj.picture.large}>
             <div class="name">
@@ -29,8 +32,12 @@ function inputTemplate (obj) {
               <div class="email">
                   ${obj.email}
                 <div class="address">
+                  <p>${obj.location.street}</p>
+                  <p>${obj.location.city}, ${obj.location.state} ${obj.location.postcode}</p>
                   <div class="number">
+                      ${obj.phone}
                     <div class="ss">
+                      ${obj.id.value}
                     </div>
                   </div>
                 </div>
@@ -38,5 +45,6 @@ function inputTemplate (obj) {
             </div>
           </div>
   `;
+}
 
 }

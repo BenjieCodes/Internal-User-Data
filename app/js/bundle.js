@@ -9851,7 +9851,7 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var url = 'https://randomuser.me/api/';
+var url = 'http://api.randomuser.me/?nat=us&results=12';
 var getData = _jquery2['default'].getJSON(url);
 var insertData = (0, _jquery2['default'])('.users');
 
@@ -9870,8 +9870,12 @@ getData.then(function (response) {
   });
 });
 // 4. Made a template for the user data
+
 function inputTemplate(obj) {
-  return '<div class="image">\n              <img src= ' + obj.picture.large + '>\n            <div class="name">\n                ' + obj.name.first + ' ' + obj.name.last + '\n              <div class="email">\n                  ' + obj.email + '\n                <div class="address">\n                  <div class="number">\n                    <div class="ss">\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n  ';
+
+  if (obj.nat === "US") {
+    return '<div class="image">\n              <img src= ' + obj.picture.large + '>\n            <div class="name">\n                ' + obj.name.first + ' ' + obj.name.last + '\n              <div class="email">\n                  ' + obj.email + '\n                <div class="address">\n                  <p>' + obj.location.street + '</p>\n                  <p>' + obj.location.city + ', ' + obj.location.state + ' ' + obj.location.postcode + '</p>\n                  <div class="number">\n                      ' + obj.phone + '\n                    <div class="ss">\n                      ' + obj.id.value + '\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n  ';
+  }
 }
 
 },{"jquery":1}]},{},[2])
