@@ -3,10 +3,13 @@
 - Understand the basics of jQuery $.ajax() and $.getJSON()
 - Understand how to use a jQuery based Promise (deferred) and how Async works.
 
+### New things I learned
+- filter: blur(<length>)
+- Used documentation to pull data from 'http'
+- In order to add another html API, use '&'
+- Reminder that in order to change an array to an object, it must be broken down to a 'for' method
+
+
 ## Deployment
 
-To deploy your project just run:
-
-- Make sure you have a lowercase folder name
-- `npm run deploy`
-- You should have a 'surge.sh' link now for your project
+Surge url: tiy-abrambenjsongsong-internaluserdata.surge.sh
