@@ -1,8 +1,9 @@
-body {
+stbody {
   padding: 30px; }
 
 .container {
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: auto; }
 
 header {
   padding: 40px;
@@ -11,7 +12,7 @@ header {
   font-weight: bold; }
 
 .usercontainer {
-  margin: 20px;
+  margin: 30px;
   float: left;
   text-align: center; }
 
@@ -23,28 +24,45 @@ img {
 
 .name {
   text-transform: uppercase;
-  font-weight: bold; }
+  font-weight: bold;
+  padding: 10px;
+  font-size: 18px; }
 
 .name span {
+  padding-bottom: 2px;
   border-bottom: 1px solid #24A059; }
 
 .email {
   text-transform: uppercase;
   font-weight: lighter;
-  color: lightgrey; }
+  color: lightgrey;
+  padding-top: 5px;
+  padding-bottom: 23px;
+  font-size: 14px; }
 
 .address {
   text-transform: capitalize;
-  color: #767676; }
+  font-weight: lighter;
+  font-size: 14px;
+  color: #767676;
+  margin: 0; }
+
+.address p {
+  margin: 0;
+  padding: 5px; }
 
 .number {
-  color: #767676; }
+  color: #767676;
+  padding: 5px;
+  font-weight: lighter;
+  font-size: 14px; }
 
 .ss {
   color: #279727;
   -webkit-filter: blur(3px);
   filter: blur(3px);
-  transition: filter 0 ease; }
+  transition: filter 0 ease;
+  padding-top: 25px; }
   .ss:hover {
     -webkit-filter: blur(0);
     filter: blur(0); }
