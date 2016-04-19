@@ -9851,8 +9851,8 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var url = 'http://api.randomuser.me/?nat=us&results=12';
-var getData = _jquery2['default'].getJSON(url);
+var url = 'http://api.randomuser.me/?nat=us&results=12'; // ?nat=us & results=12 the & symbol is used
+var getData = _jquery2['default'].getJSON(url); // to get multiple API's on one page
 var insertData = (0, _jquery2['default'])('.users');
 
 // 1. Get the Results from the URL
@@ -9870,12 +9870,9 @@ getData.then(function (response) {
   });
 });
 // 4. Made a template for the user data
-
 function inputTemplate(obj) {
 
-  if (obj.nat === "US") {
-    return '<div class="image">\n              <img src= ' + obj.picture.large + '>\n            <div class="name">\n                ' + obj.name.first + ' ' + obj.name.last + '\n              <div class="email">\n                  ' + obj.email + '\n                <div class="address">\n                  <p>' + obj.location.street + '</p>\n                  <p>' + obj.location.city + ', ' + obj.location.state + ' ' + obj.location.postcode + '</p>\n                  <div class="number">\n                      ' + obj.phone + '\n                    <div class="ss">\n                      ' + obj.id.value + '\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n  ';
-  }
+  return '\n      <div class ="usercontainer">\n        <div class="image">\n          <img src= ' + obj.picture.large + '>\n        </div>\n        <div class="name">\n          ' + obj.name.first + ' ' + obj.name.last + '\n        </div>\n        <div class="email">\n          ' + obj.email + '\n        </div>\n        <div class="address">\n          <p>' + obj.location.street + '</p>\n          <p>' + obj.location.city + ', ' + obj.location.state + ' ' + obj.location.postcode + '</p>\n        </div>\n        <div class="number">\n          ' + obj.phone + '\n        </div>\n        <div class="ss">\n          ' + obj.id.value + '\n        </div>\n      </div>\n      ';
 }
 
 },{"jquery":1}]},{},[2])

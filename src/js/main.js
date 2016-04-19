@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
-var url = 'http://api.randomuser.me/?nat=us&results=12';
-var getData = $.getJSON(url);
+var url = 'http://api.randomuser.me/?nat=us&results=12'; // ?nat=us & results=12 the & symbol is used
+var getData = $.getJSON(url);                            // to get multiple API's on one page
 var insertData = $('.users');
 
 // 1. Get the Results from the URL
@@ -21,30 +21,29 @@ insertData.append(usersInfo);
 
 });
 // 4. Made a template for the user data
-
 function inputTemplate (obj) {
 
-  if (obj.nat ==="US") {
-  return `<div class="image">
-              <img src= ${obj.picture.large}>
-            <div class="name">
-                ${obj.name.first} ${obj.name.last}
-              <div class="email">
-                  ${obj.email}
-                <div class="address">
-                  <p>${obj.location.street}</p>
-                  <p>${obj.location.city}, ${obj.location.state} ${obj.location.postcode}</p>
-                  <div class="number">
-                      ${obj.phone}
-                    <div class="ss">
-                      ${obj.id.value}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-  `;
-}
-
+  return `
+      <div class ="usercontainer">
+        <div class="image">
+          <img src= ${obj.picture.large}>
+        </div>
+        <div class="name">
+          ${obj.name.first} ${obj.name.last}
+        </div>
+        <div class="email">
+          ${obj.email}
+        </div>
+        <div class="address">
+          <p>${obj.location.street}</p>
+          <p>${obj.location.city}, ${obj.location.state} ${obj.location.postcode}</p>
+        </div>
+        <div class="number">
+          ${obj.phone}
+        </div>
+        <div class="ss">
+          ${obj.id.value}
+        </div>
+      </div>
+      `;
 }

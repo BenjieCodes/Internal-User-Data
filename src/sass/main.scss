@@ -4,10 +4,51 @@ body {
 
 .container {
   margin: 0 auto;
+  width: 1000px;
 }
 
 header {
   font-size: 30px;
   text-align: center;
   font-weight: bold;
+}
+
+.usercontainer{
+  float: left;
+  max-width: 250px;
+  text-align: center;
+}
+
+.name {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.email {
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: lightgrey;
+
+}
+
+.address {
+  text-transform: capitalize;
+  color: #767676;
+}
+
+.number {
+  color: #767676;
+}
+
+.ss {
+  color: #279727;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  transition: filter 0 ease;
+
+  &:hover {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
 }
