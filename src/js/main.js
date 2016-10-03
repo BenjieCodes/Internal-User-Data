@@ -42,7 +42,7 @@ function inputTemplate (obj) {
           ${obj.phone}
         </div>
         <div class="ss">
-          ${obj.id.value}
+          SS# ${obj.id.value}
         </div>
       </div>
       `;
