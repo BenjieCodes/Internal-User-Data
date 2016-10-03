@@ -9872,7 +9872,7 @@ getData.then(function (response) {
 // 4. Made a template for the user data
 function inputTemplate(obj) {
 
-  return '\n      <div class ="usercontainer">\n        <div class="image">\n          <img src= ' + obj.picture.large + '>\n        </div>\n        <div class="name">\n          <span>' + obj.name.first + ' ' + obj.name.last + '</span>\n        </div>\n        <div class="email">\n          ' + obj.email + '\n        </div>\n        <div class="address">\n          <p>' + obj.location.street + '</p>\n          <p>' + obj.location.city + ', ' + obj.location.state + ' ' + obj.location.postcode + '</p>\n        </div>\n        <div class="number">\n          ' + obj.phone + '\n        </div>\n        <div class="ss">\n          ' + obj.id.value + '\n        </div>\n      </div>\n      ';
+  return '\n      <div class ="usercontainer">\n        <div class="image">\n          <img src= ' + obj.picture.large + '>\n        </div>\n        <div class="name">\n          <span>' + obj.name.first + ' ' + obj.name.last + '</span>\n        </div>\n        <div class="email">\n          ' + obj.email + '\n        </div>\n        <div class="address">\n          <p>' + obj.location.street + '</p>\n          <p>' + obj.location.city + ', ' + obj.location.state + ' ' + obj.location.postcode + '</p>\n        </div>\n        <div class="number">\n          ' + obj.phone + '\n        </div>\n        <div class="ss">\n          <p>SS#' + obj.id.value + '<p>\n        </div>\n      </div>\n      ';
 }
 
 },{"jquery":1}]},{},[2])
